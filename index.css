@@ -1,0 +1,971 @@
+:root{
+    --dominant: #023436;
+    --secondary: #03b5aa;
+    --accent: #ff8552;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 255, 0);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff00;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: var(--dominant);
+    font-family: 'poppins', sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    border-bottom: 1px solid var(--secondary);
+}
+
+.logo{
+    width: 140px;
+    height: 100px;
+    display: flex;
+    margin-left: 40px;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}   
+
+.navLinks{
+    display: flex;
+    padding: 50px 20px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navLinks ul{
+    gap: 20px;
+    display: flex;
+    user-select: none;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.navLinks li{
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    color: var(--secondary);
+    transition: all 0.3s ease-in-out;
+}
+
+.navLinks li:hover{
+    color: var(--accent);
+}
+
+
+.manager{
+    width: 100%;
+    height: calc(100% - 100px);
+    display: flex;
+    overflow: hidden;
+    overflow-y: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sideLinks{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    border-right: 1px solid var(--secondary);
+}
+
+.sideLinks h2{
+    margin: 10px 0;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-right: auto;
+    color: var(--secondary);
+}
+
+.sideLinks ul{
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    padding-top: 10px;
+    user-select: none;
+    align-items: center;
+    list-style-type: none;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.sideLinks li{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    font-size: 14px;
+    cursor: pointer;
+    text-indent: 15px;
+    user-select: none;
+    flex-direction: row;
+    align-items: center;
+    color: var(--secondary);
+    justify-content: start;
+    transition: all 0.3s ease-in-out;
+    border-left: 2px solid transparent;
+}
+
+.sideLinks li:hover{
+    color: var(--accent);
+    border-left: 2px solid var(--accent);
+}
+
+.sideLinks li.active{
+    color: var(--accent);
+    border-left: 2px solid var(--accent);
+}
+
+.sideLinks i{
+    color: inherit;
+    margin-left: 5px;
+}
+
+.managerContent{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    width: calc(100% - 200px);
+}
+
+.managerPanelHead{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    border-bottom: 1px solid var(--secondary);
+}
+
+.routePath{
+    gap: 20px;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.routePath h2, i{
+    font-size: 18px;
+    user-select: none;
+    color: var(--secondary);
+}
+
+.searchManager{
+    width: 250px;
+    height: 30px;
+    display: flex;
+    margin-left: 40px;
+    margin-right: auto;
+    border-radius: 6px;
+    align-items: center;
+    border: 1px solid var(--secondary);
+}
+
+.searchManager input{
+    width: 220px;
+    height: 100%;
+    border: none;   
+    outline: none;
+    font-size: 16px;
+    text-indent: 10px;
+    color: var(--secondary);
+    background-color: transparent;
+    font-family: 'poppins', sans-serif;
+}
+
+.searchManager i{
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 10px;
+    color: var(--secondary);
+    transition: all 0.3s ease-in-out;
+}
+
+.searchManager i:hover{
+    color: var(--accent);
+}
+
+.createTask, .createProject{
+    border: none;
+    outline: none;
+    display: flex;
+    cursor: pointer;
+    padding: 5px 6px;
+    user-select: none;
+    margin-right: 20px;
+    border-radius: 2px;
+    align-items: center;
+    color: var(--secondary);
+    justify-content: space-evenly;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid var(--secondary);
+}
+
+.continueTask{
+    border: none;
+    outline: none;
+    display: flex;
+    cursor: pointer;
+    padding: 5px 6px;
+    user-select: none;
+    border-radius: 2px;
+    align-items: center;
+    margin-right: 20px;
+    color: var(--secondary);
+    justify-content: space-evenly;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid var(--secondary);
+}
+
+.createTask i, .createProject i{
+    margin: 0 5px;
+    color: inherit;
+    font-size: 16px;
+}
+
+.continueTask i{
+    margin: 0 5px;
+    color: inherit;
+    font-size: 14px;
+}
+
+.createTask span, .createProject span{
+    margin: 0 5px;
+    color: inherit;
+    font-size: 16px;
+}
+
+.continueTask p{
+    margin: 0 5px;
+    color: inherit;
+    font-size: 16px;
+}
+
+.createTask:hover, .createProject:hover{
+    background-color: var(--secondary);
+    color: var(--dominant);
+}
+
+.continueTask:hover{
+    background-color: var(--secondary);
+    color: var(--dominant);
+}
+
+.managerDisplayer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    height: calc(100% - 70px);
+}
+
+.currentTasks, .currentProjects{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.taskCard{
+    width: 340px;
+    height: 140px;
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    border-radius: 3px;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid var(--secondary);
+    background-color: var(--background);
+}
+
+
+.taskHead{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    padding: 0 10px;
+    margin-top: 10px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.taskHead h3{
+    font-size: 16px;
+    user-select: none;
+    margin-left: 10px;
+    color: var(--secondary);
+}
+
+.taskPriority{
+    display: flex;
+    padding: 10px 10px;
+    border-radius: 50%;
+    align-items: center;
+    flex-direction: row;
+    color: var(--secondary);
+    justify-content: center;
+}
+
+.taskPriority i{
+    font-size: 16px;
+    margin-right: 10px;
+    color: var(--accent);
+}
+
+/* Priority icon color variations */
+.taskPriority[priority="high"] i {
+    color: #f44336; /* Red */
+}
+
+.taskPriority[priority="medium"] i {
+    color: #ffeb3b; /* Light Yellow */
+}
+
+.taskPriority[priority="low"] i {
+    color: #4caf50; /* Green */
+}
+
+.taskStatus{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    user-select: none;
+    margin-left: auto;
+    margin-right: 10px;
+    color: var(--secondary);
+}
+
+.taskDetails{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.progress{
+    width: 50%;
+    height: 20px;
+    display: flex;
+    margin: 0 auto;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 7px;
+    padding-left: 1px;
+    padding-right: 1px;
+    align-items: center;
+    justify-content: start;
+    color: var(--dominant);
+    border: 1px solid var(--secondary);
+}
+
+.progressBar{
+    height: 90%;
+    display: flex;
+    font-size: 16px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    font-family: 'poppins', sans-serif;
+}
+
+.progressBar p{
+    margin: 0 auto;
+}
+
+.taskView{
+    width: 100%;
+    height: calc(100% - 70px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    overflow-y: auto;
+}
+
+/* Task Create Form Styles */
+.taskCreateForm {
+    width: 96%;
+    min-height: 300px;
+    display: none; /* Hidden by default */
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 3px;
+    flex-direction: column;
+    justify-content: start;
+    border: 1px solid var(--secondary);
+    background-color: var(--dominant);
+    position: relative;
+    z-index: 10; /* Ensure form appears above task cards */
+}
+
+.formHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--secondary);
+}
+
+.formHeader h3 {
+    margin: 0;
+    color: var(--secondary);
+    font-size: 18px;
+}
+
+.closeForm {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--secondary);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.closeForm:hover {
+    color: var(--accent);
+    background-color: rgba(255, 133, 82, 0.1);
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.formGroup label {
+    color: var(--secondary);
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.formGroup input,
+.formGroup select {
+    padding: 8px 12px;
+    border: 1px solid var(--secondary);
+    border-radius: 3px;
+    background-color: transparent;
+    color: var(--secondary);
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(255, 133, 82, 0.2);
+}
+
+.formGroup select option {
+    background-color: var(--dominant);
+    color: var(--secondary);
+}
+
+.formActions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+
+.submitTask,
+.cancelTask {
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.submitTask {
+    background-color: var(--secondary);
+    color: var(--dominant);
+    border: 1px solid var(--secondary);
+}
+
+.submitTask:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.cancelTask {
+    background-color: transparent;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+.cancelTask:hover {
+    background-color: var(--secondary);
+    color: var(--dominant);
+}
+
+/* Text Editor Styles */
+.taskDocPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+}
+
+.editorHeader {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: var(--dominant);
+    border-bottom: 1px solid var(--secondary);
+}
+
+.taskInfo h2 {
+    margin: 0;
+    color: var(--secondary);
+    font-size: 18px;
+}
+
+.editorTaskStatus {
+    font-size: 12px;
+    color: var(--accent);
+    margin-left: 10px;
+}
+
+.editorControls {
+    display: flex;
+    gap: 10px;
+}
+
+.saveDoc, .finishDoc {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.saveDoc {
+    background-color: var(--secondary);
+    color: var(--dominant);
+}
+
+.finishDoc {
+    background-color: var(--accent);
+    color: white;
+    margin-right: 30px;
+}
+
+.finishDoc i, .saveDoc i {
+    margin-right: 5px;
+    color: inherit;
+    font-size: 16px;
+}
+
+.saveDoc:hover, .finishDoc:hover {
+    opacity: 0.8;
+}
+
+.editorToolbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    gap: 20px;
+}
+
+.formatGroup {
+    display: flex;
+    gap: 5px;
+    padding: 0 10px;
+    border-right: 1px solid #ddd;
+}
+
+.formatGroup:last-child {
+    border-right: none;
+}
+
+.toolBtn {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.toolBtn:hover {
+    background-color: #f0f0f0;
+    border-color: var(--secondary);
+}
+
+.toolBtn:active {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.pageNavigation {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.navBtn {
+    padding: 6px 12px;
+    border: 1px solid var(--secondary);
+    background-color: transparent;
+    color: var(--secondary);
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.navBtn:hover:not(:disabled) {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.navBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pageInfo {
+    font-weight: bold;
+    color: var(--dominant);
+}
+
+.documentPages {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+}
+
+.a4Page {
+    width: 210mm;
+    min-height: 297mm;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20mm;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+.pageHeader {
+    position: absolute;
+    top: 10mm;
+    right: 20mm;
+    font-size: 10px;
+    color: #666;
+}
+
+.pageContent {
+    width: 100%;
+    min-height: calc(297mm - 40mm);
+    outline: none;
+    font-size: 14px;
+    color: #333;
+}
+
+.pageContent h1, .pageContent h2, .pageContent h3 {
+    color: var(--dominant);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.pageContent h1 {
+    font-size: 24px;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 5px;
+}
+
+.pageContent h2 {
+    font-size: 20px;
+    color: var(--secondary);
+}
+
+.pageContent h3 {
+    font-size: 16px;
+    color: var(--accent);
+}
+
+.pageContent ul, .pageContent ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.pageContent blockquote {
+    border-left: 4px solid var(--secondary);
+    margin-left: 0;
+    padding-left: 15px;
+    font-style: italic;
+    color: #666;
+}
+
+.pageContent p {
+    margin-bottom: 15px;
+}
+
+@media print {
+    .editorHeader, .editorToolbar, .pageNavigation {
+        display: none;
+    }
+    
+    .a4Page {
+        box-shadow: none;
+        margin: 0;
+        page-break-after: always;
+    }
+    
+    .a4Page:last-child {
+        page-break-after: avoid;
+    }
+}
+
+/* View Toggle Styles */
+.viewToggle {
+    display: flex;
+    margin-right: 15px;
+    border: 1px solid var(--secondary);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.toggleBtn {
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: transparent;
+    color: var(--secondary);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    border-right: 1px solid var(--secondary);
+}
+
+
+.toggleBtn:last-child {
+    border-right: none;
+}
+
+.toggleBtn.active {
+    background-color: var(--secondary);
+    color: var(--dominant);
+}
+
+.toggleBtn i {
+    font-size: 16px;
+    color: inherit;
+}
+
+.toggleBtn:hover:not(.active) {
+    background-color: rgba(3, 181, 170, 0.1);
+}
+
+/* List View Styles */
+.currentTasks.listView {
+    display: flex;
+    cursor: pointer;
+    padding-top: 10px;
+    user-select: none;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.currentTasks.listView .taskCard {
+    width: 90%;
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.listContent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listTitle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.listTitle h3 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--secondary);
+}
+
+.wordCount {
+    font-size: 12px;
+    color: var(--accent);
+    background-color: rgba(255, 133, 82, 0.1);
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.listActions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Action Buttons */
+.taskActions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.actionBtn {
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--secondary);
+    background-color: transparent;
+    color: var(--secondary);
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+.actionBtn:hover {
+    background-color: var(--secondary);
+    color: var(--dominant);
+}
+
+.actionBtn.editTask:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: white;
+}
+
+.actionBtn.deleteTask:hover {
+    background-color: #f44336;
+    border-color: #f44336;
+    color: white;
+}
+
+/* Updated task card styles for tasks page */
+.taskCard .progress {
+    width: 40%;
+}
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrManager</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" href="./MrM.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./MrMl.svg" alt="MrManager logo">
+                </a>
+            </div>
+        </div>
+
+        <div class="manager">
+            <div class="sideLinks">
+                <h2>Navigation</h2>
+                <ul>
+                    <li><i class="fa-solid fa-gauge"></i>Dashboard</li>
+                    <li><i class="fa-solid fa-list"></i>Tasks</li>
+                    <li><i class="fa-solid fa-folder"></i>Projects</li>
+                    <li><i class="fa-solid fa-cog"></i>Settings</li>
+                </ul>
+            </div>
+
+            <div class="managerContent">
+                <div class="managerPanelHead">
+                    <div class="routePath">
+                        <i class="fa-solid fa-gauge"></i>
+                        <h2>Dashboard</h2>
+                    </div>
+
+                    <div class="searchManager">
+                        <input type="text" placeholder="Search...">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <button class="createTask">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Create Task</span>
+                    </button>
+                </div>
+                <div class="managerDisplayer">
+                    <!-- Dynamic content will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+    <script src="https://kit.fontawesome.com/826c469fe7.js" crossorigin="anonymous"></script>
+</body>
+</html>
